@@ -1,9 +1,8 @@
 package repositories
 
 import (
+	"github.com/lohuza/api-shared-temp/models/savedmodel"
 	"gorm.io/gorm"
-
-	"github.com/High-Performance-App/API-Shared/models/savedmodel"
 )
 
 type UserSaveRepository interface {

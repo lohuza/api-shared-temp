@@ -1,4 +1,4 @@
-module github.com/High-Performance-App/API-Shared
+module github.com/lohuza/api-shared-temp
 
 go 1.18
 

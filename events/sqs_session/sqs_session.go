@@ -2,9 +2,9 @@ package sqssession
 
 import (
 	"context"
+	"github.com/lohuza/api-shared-temp/events"
 	"time"
 
-	"github.com/High-Performance-App/API-Shared/events"
 	"github.com/aws/aws-sdk-go-v2/aws"
 	"github.com/aws/aws-sdk-go-v2/config"
 	"github.com/aws/aws-sdk-go-v2/credentials"

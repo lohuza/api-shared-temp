@@ -1,9 +1,9 @@
 package boostmodel
 
 import (
-	"github.com/High-Performance-App/API-Shared/models/episodemodel"
-	"github.com/High-Performance-App/API-Shared/models/savedmodel"
-	"github.com/High-Performance-App/API-Shared/models/storymodel"
+	"github.com/lohuza/api-shared-temp/models/episodemodel"
+	"github.com/lohuza/api-shared-temp/models/savedmodel"
+	"github.com/lohuza/api-shared-temp/models/storymodel"
 )
 
 type Boost struct {

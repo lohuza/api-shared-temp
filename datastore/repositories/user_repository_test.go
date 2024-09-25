@@ -2,11 +2,11 @@ package repositories
 
 import (
 	"context"
+	"github.com/lohuza/api-shared-temp/models/usermodel"
+	"github.com/lohuza/api-shared-temp/test"
 	"testing"
 	"time"
 
-	"github.com/High-Performance-App/API-Shared/models/usermodel"
-	"github.com/High-Performance-App/API-Shared/test"
 	"github.com/stretchr/testify/assert"
 )
 

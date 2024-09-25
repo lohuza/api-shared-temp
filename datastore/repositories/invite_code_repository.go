@@ -1,9 +1,8 @@
 package repositories
 
 import (
+	"github.com/lohuza/api-shared-temp/models/invitationmodel"
 	"gorm.io/gorm"
-
-	"github.com/High-Performance-App/API-Shared/models/invitationmodel"
 )
 
 type InviteCodeRepository interface {

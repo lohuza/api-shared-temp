@@ -1,9 +1,8 @@
 package repositories
 
 import (
+	"github.com/lohuza/api-shared-temp/models/usermodel"
 	"gorm.io/gorm"
-
-	"github.com/High-Performance-App/API-Shared/models/usermodel"
 )
 
 type UserRepository interface {
