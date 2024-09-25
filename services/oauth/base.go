@@ -1,7 +1,7 @@
 package oauth
 
 import (
-	"github.com/High-Performance-App/API-Shared/services/random"
+	"github.com/lohuza/api-shared-temp/services/random"
 	"gorm.io/gorm"
 	"time"
 

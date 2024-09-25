@@ -2,9 +2,9 @@ package test
 
 import (
 	"context"
+	"github.com/lohuza/api-shared-temp/services/sqlservice"
 	"gorm.io/gorm"
 
-	"github.com/High-Performance-App/API-Shared/services/sqlservice"
 	"github.com/testcontainers/testcontainers-go"
 	mysqlcontainer "github.com/testcontainers/testcontainers-go/modules/mysql"
 )
