@@ -48,3 +48,22 @@ func (repo *subscriptionRepository) DeleteUsersExistingSubscription(userID uint)
 	err := repo.db.Table((*usermodel.Subscription)(nil).TableName()).Delete(&usermodel.Subscription{}, userID).Error
 	return err
 }
+
+func (repo *subscriptionRepository) UpdateSubscription(subscription *usermodel.Subscription) error {
+	return repo.db.Table(subscription.TableName()).Where("user_id = ?", subscription.UserID).Updates(subscription).Error
+}
+
+func (repo *subscriptionRepository) SaveUserSubscriptionsBulk(subscriptions []*usermodel.Subscription) error {
+	if len(subscriptions) == 0 {
+		return nil
+	}
+
+	return repo.db.Transaction(func(tx *gorm.DB) error {
+		for _, subscription := range subscriptions {
+			if err := tx.Table(subscription.TableName()).Save(subscription).Error; err != nil {
+				return err
+			}
+		}
+		return nil
+	})
+}
