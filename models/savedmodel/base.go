@@ -10,7 +10,7 @@ const (
 	SavedTypeEpisode      = "episode"
 	SavedTypeCollection   = "collection"
 	SavedTypeHabitEpisode = "habitEpisode"
-	SavedTypeStory        = "story"
+	SavedTypeEpisodeStory = "episodeStory"
 )
 
 type Saved struct {
