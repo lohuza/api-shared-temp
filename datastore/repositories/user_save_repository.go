@@ -28,7 +28,7 @@ func (repo *userSaveRepository) GetUserSave(userID uint, saveType string, id str
 }
 
 func (repo *userSaveRepository) GetSaves(userID uint, offset int, limit int) ([]savedmodel.Saved, error) {
-	saves := make([]savedmodel.Saved, 0, 20)
+	saves := make([]savedmodel.Saved, 0, limit)
 	err := repo.db.Offset(offset).Limit(limit).Find(&saves, "user_id = ?", userID).Order("created desc").Error
 	return saves, err
 }
