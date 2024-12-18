@@ -28,7 +28,7 @@ func (repo *userSaveRepository) GetUserSave(userID uint, saveType string, id str
 }
 
 func (repo *userSaveRepository) GetSaves(userID uint, offset int, limit int) ([]savedmodel.Saved, error) {
-	saves := make([]savedmodel.Saved, 0, limit)
+	var saves []savedmodel.Saved
 	err := repo.db.Where("user_id = ?", userID).
 		Order("created desc").
 		Offset(offset).
@@ -38,7 +38,7 @@ func (repo *userSaveRepository) GetSaves(userID uint, offset int, limit int) ([]
 }
 
 func (repo *userSaveRepository) GetSavesByType(userID uint, saveType string, page int) ([]savedmodel.Saved, error) {
-	saves := make([]savedmodel.Saved, 0, 20)
+	var saves []savedmodel.Saved
 	err := repo.db.Where("user_id = ? AND type = ?", userID, saveType).
 		Order("created desc").
 		Offset(20 * page).
